@@ -1,10 +1,7 @@
 [
   {
-    "RegionID": 9,
     "SizeRank": 0,
-    "RegionName": "California",
-    "RegionType": "State",
-    "StateName": "CA",
+    "StateName": "California",
     "2000-01-31": 205366,
     "2000-02-29": 206236,
     "2000-03-31": 207321,
@@ -274,11 +271,8 @@
     "2022-03-31": 792230
   },
   {
-    "RegionID": 54,
     "SizeRank": 1,
-    "RegionName": "Texas",
-    "RegionType": "State",
-    "StateName": "TX",
+    "StateName": "Texas",
     "2000-01-31": 114548,
     "2000-02-29": 114667,
     "2000-03-31": 114704,
@@ -548,11 +542,8 @@
     "2022-03-31": 296622
   },
   {
-    "RegionID": 43,
     "SizeRank": 2,
-    "RegionName": "New York",
-    "RegionType": "State",
-    "StateName": "NY",
+    "StateName": "New York",
     "2000-01-31": 138800,
     "2000-02-29": 139486,
     "2000-03-31": 140056,
@@ -822,11 +813,8 @@
     "2022-03-31": 358191
   },
   {
-    "RegionID": 14,
     "SizeRank": 3,
-    "RegionName": "Florida",
-    "RegionType": "State",
-    "StateName": "FL",
+    "StateName": "Florida",
     "2000-01-31": 120434,
     "2000-02-29": 120806,
     "2000-03-31": 121192,
@@ -1096,11 +1084,8 @@
     "2022-03-31": 384693
   },
   {
-    "RegionID": 21,
     "SizeRank": 4,
-    "RegionName": "Illinois",
-    "RegionType": "State",
-    "StateName": "IL",
+    "StateName": "Illinois",
     "2000-01-31": 147940,
     "2000-02-29": 148259,
     "2000-03-31": 148694,
@@ -1370,11 +1355,8 @@
     "2022-03-31": 258872
   },
   {
-    "RegionID": 47,
     "SizeRank": 5,
-    "RegionName": "Pennsylvania",
-    "RegionType": "State",
-    "StateName": "PA",
+    "StateName": "Pennsylvania",
     "2000-01-31": 106496,
     "2000-02-29": 106854,
     "2000-03-31": 107147,
@@ -1644,11 +1626,8 @@
     "2022-03-31": 258835
   },
   {
-    "RegionID": 44,
     "SizeRank": 6,
-    "RegionName": "Ohio",
-    "RegionType": "State",
-    "StateName": "OH",
+    "StateName": "Ohio",
     "2000-01-31": 110634,
     "2000-02-29": 110804,
     "2000-03-31": 110979,
@@ -1918,11 +1897,8 @@
     "2022-03-31": 204237
   },
   {
-    "RegionID": 30,
     "SizeRank": 7,
-    "RegionName": "Michigan",
-    "RegionType": "State",
-    "StateName": "MI",
+    "StateName": "Michigan",
     "2000-01-31": 119863,
     "2000-02-29": 120063,
     "2000-03-31": 120447,
@@ -2192,11 +2168,8 @@
     "2022-03-31": 225759
   },
   {
-    "RegionID": 16,
     "SizeRank": 8,
-    "RegionName": "Georgia",
-    "RegionType": "State",
-    "StateName": "GA",
+    "StateName": "Georgia",
     "2000-01-31": 131924,
     "2000-02-29": 132361,
     "2000-03-31": 132797,
@@ -2466,11 +2439,8 @@
     "2022-03-31": 301987
   },
   {
-    "RegionID": 36,
     "SizeRank": 9,
-    "RegionName": "North Carolina",
-    "RegionType": "State",
-    "StateName": "NC",
+    "StateName": "North Carolina",
     "2000-01-31": 135295,
     "2000-02-29": 135624,
     "2000-03-31": 135905,
@@ -2740,11 +2710,8 @@
     "2022-03-31": 303839
   },
   {
-    "RegionID": 40,
     "SizeRank": 10,
-    "RegionName": "New Jersey",
-    "RegionType": "State",
-    "StateName": "NJ",
+    "StateName": "New Jersey",
     "2000-01-31": 190759,
     "2000-02-29": 191537,
     "2000-03-31": 192187,
@@ -3014,11 +2981,8 @@
     "2022-03-31": 458872
   },
   {
-    "RegionID": 56,
     "SizeRank": 11,
-    "RegionName": "Virginia",
-    "RegionType": "State",
-    "StateName": "VA",
+    "StateName": "Virginia",
     "2000-01-31": 137413,
     "2000-02-29": 137923,
     "2000-03-31": 138384,
@@ -3288,11 +3252,8 @@
     "2022-03-31": 367716
   },
   {
-    "RegionID": 59,
     "SizeRank": 12,
-    "RegionName": "Washington",
-    "RegionType": "State",
-    "StateName": "WA",
+    "StateName": "Washington",
     "2000-01-31": 177838,
     "2000-02-29": 178442,
     "2000-03-31": 178961,
@@ -3562,11 +3523,8 @@
     "2022-03-31": 619100
   },
   {
-    "RegionID": 26,
     "SizeRank": 13,
-    "RegionName": "Massachusetts",
-    "RegionType": "State",
-    "StateName": "MA",
+    "StateName": "Massachusetts",
     "2000-01-31": 214599,
     "2000-02-29": 215618,
     "2000-03-31": 216678,
@@ -3836,11 +3794,8 @@
     "2022-03-31": 584393
   },
   {
-    "RegionID": 22,
     "SizeRank": 14,
-    "RegionName": "Indiana",
-    "RegionType": "State",
-    "StateName": "IN",
+    "StateName": "Indiana",
     "2000-01-31": 102891,
     "2000-02-29": 102816,
     "2000-03-31": 102708,
@@ -4110,11 +4065,8 @@
     "2022-03-31": 213360
   },
   {
-    "RegionID": 8,
     "SizeRank": 15,
-    "RegionName": "Arizona",
-    "RegionType": "State",
-    "StateName": "AZ",
+    "StateName": "Arizona",
     "2000-01-31": 138877,
     "2000-02-29": 139225,
     "2000-03-31": 139626,
@@ -4384,11 +4336,8 @@
     "2022-03-31": 432655
   },
   {
-    "RegionID": 53,
     "SizeRank": 16,
-    "RegionName": "Tennessee",
-    "RegionType": "State",
-    "StateName": "TN",
+    "StateName": "Tennessee",
     "2000-01-31": 112753,
     "2000-02-29": 112940,
     "2000-03-31": 113084,
@@ -4658,11 +4607,8 @@
     "2022-03-31": 281045
   },
   {
-    "RegionID": 32,
     "SizeRank": 17,
-    "RegionName": "Missouri",
-    "RegionType": "State",
-    "StateName": "MO",
+    "StateName": "Missouri",
     "2000-01-31": 100318,
     "2000-02-29": 100518,
     "2000-03-31": 100765,
@@ -4932,11 +4878,8 @@
     "2022-03-31": 222610
   },
   {
-    "RegionID": 27,
     "SizeRank": 18,
-    "RegionName": "Maryland",
-    "RegionType": "State",
-    "StateName": "MD",
+    "StateName": "Maryland",
     "2000-01-31": 167044,
     "2000-02-29": 167075,
     "2000-03-31": 167284,
@@ -5206,11 +5149,8 @@
     "2022-03-31": 404556
   },
   {
-    "RegionID": 60,
     "SizeRank": 19,
-    "RegionName": "Wisconsin",
-    "RegionType": "State",
-    "StateName": "WI",
+    "StateName": "Wisconsin",
     "2000-01-31": 118197,
     "2000-02-29": 118261,
     "2000-03-31": 118508,
@@ -5480,11 +5420,8 @@
     "2022-03-31": 257439
   },
   {
-    "RegionID": 31,
     "SizeRank": 20,
-    "RegionName": "Minnesota",
-    "RegionType": "State",
-    "StateName": "MN",
+    "StateName": "Minnesota",
     "2000-01-31": 137294,
     "2000-02-29": 137990,
     "2000-03-31": 138530,
@@ -5754,11 +5691,8 @@
     "2022-03-31": 330932
   },
   {
-    "RegionID": 10,
     "SizeRank": 21,
-    "RegionName": "Colorado",
-    "RegionType": "State",
-    "StateName": "CO",
+    "StateName": "Colorado",
     "2000-01-31": 191057,
     "2000-02-29": 191990,
     "2000-03-31": 192869,
@@ -6028,11 +5962,8 @@
     "2022-03-31": 584024
   },
   {
-    "RegionID": 4,
     "SizeRank": 22,
-    "RegionName": "Alabama",
-    "RegionType": "State",
-    "StateName": "AL",
+    "StateName": "Alabama",
     "2000-01-31": 101057,
     "2000-02-29": 101332,
     "2000-03-31": 101479,
@@ -6302,11 +6233,8 @@
     "2022-03-31": 196843
   },
   {
-    "RegionID": 51,
     "SizeRank": 23,
-    "RegionName": "South Carolina",
-    "RegionType": "State",
-    "StateName": "SC",
+    "StateName": "South Carolina",
     "2000-01-31": 122779,
     "2000-02-29": 123141,
     "2000-03-31": 123399,
@@ -6576,11 +6504,8 @@
     "2022-03-31": 276997
   },
   {
-    "RegionID": 25,
     "SizeRank": 24,
-    "RegionName": "Louisiana",
-    "RegionType": "State",
-    "StateName": "LA",
+    "StateName": "Louisiana",
     "2000-01-31": 106504,
     "2000-02-29": 106868,
     "2000-03-31": 107082,
@@ -6850,11 +6775,8 @@
     "2022-03-31": 208966
   },
   {
-    "RegionID": 24,
     "SizeRank": 25,
-    "RegionName": "Kentucky",
-    "RegionType": "State",
-    "StateName": "KY",
+    "StateName": "Kentucky",
     "2000-01-31": 91364,
     "2000-02-29": 91472,
     "2000-03-31": 91606,
@@ -7124,11 +7046,8 @@
     "2022-03-31": 190858
   },
   {
-    "RegionID": 46,
     "SizeRank": 26,
-    "RegionName": "Oregon",
-    "RegionType": "State",
-    "StateName": "OR",
+    "StateName": "Oregon",
     "2000-01-31": 162883,
     "2000-02-29": 163400,
     "2000-03-31": 163804,
@@ -7398,11 +7317,8 @@
     "2022-03-31": 516465
   },
   {
-    "RegionID": 45,
     "SizeRank": 27,
-    "RegionName": "Oklahoma",
-    "RegionType": "State",
-    "StateName": "OK",
+    "StateName": "Oklahoma",
     "2000-01-31": 79562,
     "2000-02-29": 79630,
     "2000-03-31": 79845,
@@ -7672,11 +7588,8 @@
     "2022-03-31": 174225
   },
   {
-    "RegionID": 11,
     "SizeRank": 28,
-    "RegionName": "Connecticut",
-    "RegionType": "State",
-    "StateName": "CT",
+    "StateName": "Connecticut",
     "2000-01-31": 184405,
     "2000-02-29": 185410,
     "2000-03-31": 186352,
@@ -7946,11 +7859,8 @@
     "2022-03-31": 369485
   },
   {
-    "RegionID": 19,
     "SizeRank": 29,
-    "RegionName": "Iowa",
-    "RegionType": "State",
-    "StateName": "IA",
+    "StateName": "Iowa",
     "2000-01-31": 93082,
     "2000-02-29": 93375,
     "2000-03-31": 93607,
@@ -8220,11 +8130,8 @@
     "2022-03-31": 186558
   },
   {
-    "RegionID": 34,
     "SizeRank": 30,
-    "RegionName": "Mississippi",
-    "RegionType": "State",
-    "StateName": "MS",
+    "StateName": "Mississippi",
     "2000-01-31": 83861,
     "2000-02-29": 83873,
     "2000-03-31": 83917,
@@ -8494,11 +8401,8 @@
     "2022-03-31": 159655
   },
   {
-    "RegionID": 6,
     "SizeRank": 31,
-    "RegionName": "Arkansas",
-    "RegionType": "State",
-    "StateName": "AR",
+    "StateName": "Arkansas",
     "2000-01-31": 79465,
     "2000-02-29": 79634,
     "2000-03-31": 79783,
@@ -8768,11 +8672,8 @@
     "2022-03-31": 171835
   },
   {
-    "RegionID": 23,
     "SizeRank": 32,
-    "RegionName": "Kansas",
-    "RegionType": "State",
-    "StateName": "KS",
+    "StateName": "Kansas",
     "2000-01-31": 94017,
     "2000-02-29": 94075,
     "2000-03-31": 94241,
@@ -9042,11 +8943,8 @@
     "2022-03-31": 200500
   },
   {
-    "RegionID": 55,
     "SizeRank": 33,
-    "RegionName": "Utah",
-    "RegionType": "State",
-    "StateName": "UT",
+    "StateName": "Utah",
     "2000-01-31": 182436,
     "2000-02-29": 182555,
     "2000-03-31": 182729,
@@ -9316,10 +9214,7 @@
     "2022-03-31": 566740
   },
   {
-    "RegionID": 42,
     "SizeRank": 34,
-    "RegionName": "Nevada",
-    "RegionType": "State",
     "StateName": "NV",
     "2000-01-31": 169083,
     "2000-02-29": 169130,
@@ -9590,11 +9485,8 @@
     "2022-03-31": 461529
   },
   {
-    "RegionID": 41,
     "SizeRank": 35,
-    "RegionName": "New Mexico",
-    "RegionType": "State",
-    "StateName": "NM",
+    "StateName": "New Mexico",
     "2000-01-31": "",
     "2000-02-29": "",
     "2000-03-31": "",
@@ -9864,11 +9756,8 @@
     "2022-03-31": 283372
   },
   {
-    "RegionID": 61,
     "SizeRank": 36,
-    "RegionName": "West Virginia",
-    "RegionType": "State",
-    "StateName": "WV",
+    "StateName": "West Virginia",
     "2000-01-31": 66635,
     "2000-02-29": 66692,
     "2000-03-31": 66762,
@@ -10138,11 +10027,8 @@
     "2022-03-31": 130463
   },
   {
-    "RegionID": 38,
     "SizeRank": 37,
-    "RegionName": "Nebraska",
-    "RegionType": "State",
-    "StateName": "NE",
+    "StateName": "Nebraska",
     "2000-01-31": 116858,
     "2000-02-29": 117165,
     "2000-03-31": 117397,
@@ -10412,11 +10298,8 @@
     "2022-03-31": 233221
   },
   {
-    "RegionID": 20,
     "SizeRank": 38,
-    "RegionName": "Idaho",
-    "RegionType": "State",
-    "StateName": "ID",
+    "StateName": "Idaho",
     "2000-01-31": 125667,
     "2000-02-29": 125620,
     "2000-03-31": 125731,
@@ -10686,11 +10569,8 @@
     "2022-03-31": 471750
   },
   {
-    "RegionID": 18,
     "SizeRank": 39,
-    "RegionName": "Hawaii",
-    "RegionType": "State",
-    "StateName": "HI",
+    "StateName": "Hawaii",
     "2000-01-31": 246378,
     "2000-02-29": 246399,
     "2000-03-31": 247020,
@@ -10960,11 +10840,8 @@
     "2022-03-31": 992619
   },
   {
-    "RegionID": 28,
     "SizeRank": 40,
-    "RegionName": "Maine",
-    "RegionType": "State",
-    "StateName": "ME",
+    "StateName": "Maine",
     "2000-01-31": 114924,
     "2000-02-29": 115517,
     "2000-03-31": 115963,
@@ -11234,11 +11111,8 @@
     "2022-03-31": 346986
   },
   {
-    "RegionID": 39,
     "SizeRank": 41,
-    "RegionName": "New Hampshire",
-    "RegionType": "State",
-    "StateName": "NH",
+    "StateName": "New Hampshire",
     "2000-01-31": 146753,
     "2000-02-29": 147468,
     "2000-03-31": 148221,
@@ -11508,11 +11382,8 @@
     "2022-03-31": 434563
   },
   {
-    "RegionID": 50,
     "SizeRank": 42,
-    "RegionName": "Rhode Island",
-    "RegionType": "State",
-    "StateName": "RI",
+    "StateName": "Rhode Island",
     "2000-01-31": 146922,
     "2000-02-29": 147892,
     "2000-03-31": 148784,
@@ -11782,11 +11653,8 @@
     "2022-03-31": 425205
   },
   {
-    "RegionID": 35,
     "SizeRank": 43,
-    "RegionName": "Montana",
-    "RegionType": "State",
-    "StateName": "MT",
+    "StateName": "Montana",
     "2000-01-31": "",
     "2000-02-29": "",
     "2000-03-31": "",
@@ -12056,11 +11924,8 @@
     "2022-03-31": 434390
   },
   {
-    "RegionID": 13,
     "SizeRank": 44,
-    "RegionName": "Delaware",
-    "RegionType": "State",
-    "StateName": "DE",
+    "StateName": "Delaware",
     "2000-01-31": 150526,
     "2000-02-29": 150915,
     "2000-03-31": 151317,
@@ -12330,11 +12195,8 @@
     "2022-03-31": 339687
   },
   {
-    "RegionID": 52,
     "SizeRank": 45,
-    "RegionName": "South Dakota",
-    "RegionType": "State",
-    "StateName": "SD",
+    "StateName": "South Dakota",
     "2000-01-31": 116373,
     "2000-02-29": 116112,
     "2000-03-31": 115748,
@@ -12604,11 +12466,8 @@
     "2022-03-31": 283188
   },
   {
-    "RegionID": 3,
     "SizeRank": 46,
-    "RegionName": "Alaska",
-    "RegionType": "State",
-    "StateName": "AK",
+    "StateName": "Alaska",
     "2000-01-31": 133885,
     "2000-02-29": 134191,
     "2000-03-31": 134252,
@@ -12878,11 +12737,8 @@
     "2022-03-31": 328948
   },
   {
-    "RegionID": 37,
     "SizeRank": 47,
-    "RegionName": "North Dakota",
-    "RegionType": "State",
-    "StateName": "ND",
+    "StateName": "North Dakota",
     "2000-01-31": "",
     "2000-02-29": "",
     "2000-03-31": "",
@@ -13152,11 +13008,8 @@
     "2022-03-31": 274853
   },
   {
-    "RegionID": 58,
     "SizeRank": 48,
-    "RegionName": "Vermont",
-    "RegionType": "State",
-    "StateName": "VT",
+    "StateName": "Vermont",
     "2000-01-31": 127714,
     "2000-02-29": 128067,
     "2000-03-31": 128535,
@@ -13426,11 +13279,8 @@
     "2022-03-31": 347329
   },
   {
-    "RegionID": 12,
     "SizeRank": 49,
-    "RegionName": "District of Columbia",
-    "RegionType": "State",
-    "StateName": "DC",
+    "StateName": "District of Columbia",
     "2000-01-31": 216927,
     "2000-02-29": 217758,
     "2000-03-31": 218559,
@@ -13700,11 +13550,8 @@
     "2022-03-31": 821836
   },
   {
-    "RegionID": 62,
     "SizeRank": 50,
-    "RegionName": "Wyoming",
-    "RegionType": "State",
-    "StateName": "WY",
+    "StateName": "Wyoming",
     "2000-01-31": "",
     "2000-02-29": "",
     "2000-03-31": "",
