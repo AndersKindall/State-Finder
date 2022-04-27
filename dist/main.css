@@ -1,4 +1,16 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+body {
+  font-family: "Didot", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
