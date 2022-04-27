@@ -30,9 +30,6 @@ window.addEventListener('DOMContentLoaded', (e) => {
         const months2021 = vals.slice(254, 266);
         const months2022 = vals.slice(266)
         console.log(months2022)
-
-        // let yearOne = california.slice(2, 14);
-        // console.log(year1)
     });
 });
 
