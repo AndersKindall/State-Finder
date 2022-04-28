@@ -124,11 +124,8 @@ import { select, json, values } from "d3";
 //             const avgPrice2022 = calcAvg(months2022);
 //             stateObj["2022"] = avgPrice2022;
 //             const stateName = JSON.stringify(vals[1]);
-//             modifiedData[stateName] = stateObj; 
-//             console.log(stateName)
-//             console.log(stateObj)           
+//             modifiedData[stateName] = stateObj;          
 //         }
 //     });
-//     console.log(modifiedData)
 //     return modifiedData;
 // }
