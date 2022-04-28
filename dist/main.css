@@ -20,3 +20,15 @@ h2 {
   font-size: 30px;
   margin: 5px;
 }
+
+.map-container {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.graph-container {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
