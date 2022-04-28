@@ -2,7 +2,6 @@ import { select, scaleLinear, max, min, csv, scaleBand, axisLeft, axisBottom } f
 
 export const renderGraph = () => {
     csv('./data/data.csv').then(data => {
-        console.log(data);
         const xValue = d => d.price;
         const yValue = d => d.year;
         const svg = select('svg');
@@ -32,17 +31,34 @@ export const renderGraph = () => {
         svg.selectAll('rect').data(data)
             .enter().append('rect')
                 .attr('y', d => yScale(yValue(d)))
-                // .attr('x', d => xScale.bandwidth())
                 .attr('width', d => xScale(xValue(d)))
                 .attr('height', yScale.bandwidth())
-                .attr('transform', `translate(${margin.left},${margin.top - 12})`)
-                .on(mouse)
+                .attr('transform', `translate(${margin.left},${margin.top - 19.5})`)
+                .on('mouseenter', function (){
+                    d3.select(this)
+                        .transition()
+                        .duration(300)
+                        .style('fill', 'blue')
+                })
+                .on('mouseleave', function () {
+                    d3.select(this)
+                        .transition()
+                        .duration(300)
+                        .style('fill', 'black')  
+                })
+                // .on('click', function () {
+                //     g.append('text')
+                //         .attr('class', 'price')
+                //         .attr('x', margin.right)
+                //         .attr('y', margin.top)
+                //         .attr('text-anchor', 'middle')
+                //         .text(d => `${yValue(d)} Average: $${xValue(d)}`)
+                // })
         
         g.append('text') 
             .attr('class', 'yLabel')
             .attr('x', margin.left - 120)
             .attr('y', height/2)
-            // .attr('transform', 'rotate(-90)')
             .attr('text-anchor', 'middle')
             .text('Years')
             .style('font-size', '12px')
@@ -52,9 +68,8 @@ export const renderGraph = () => {
             .attr('class', 'xLabel')
             .attr('x', width/2)
             .attr('y', height - margin.bottom + 12)
-            // .attr('transform', 'rotate(-90)')
             .attr('text-anchor', 'middle')
-            .text('Average Price of Single Family Home')
+            .text('Average Price of Single Family Home in U.S. Dollars')
             .style('font-size', '12px')
             .style('font-weight', 'bold')
     });
