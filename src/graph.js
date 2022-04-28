@@ -2,12 +2,13 @@ import { select, scaleLinear, max, min, csv, scaleBand, axisLeft, axisBottom } f
 
 export const renderGraph = () => {
     csv('./data/data.csv').then(data => {
+        console.log(data);
         const xValue = d => d.price;
         const yValue = d => d.year;
         const svg = select('svg');
         const width = +svg.attr('width');
         const height = +svg.attr('height');
-        const margin = { top: 20, right: 20, bottom: 20, left: 50};
+        const margin = { top: 20, right: 20, bottom: 40, left: 70};
         const innerWidth = width - margin.left - margin.right;
         const innerHeight = height - margin.top - margin.bottom;
     
@@ -22,7 +23,7 @@ export const renderGraph = () => {
             .padding(0.05);
 
         const g = svg.append('g')
-            .attr('transform', `translate(${margin.left},${margin})`);
+            .attr('transform', `translate(${margin.left},${margin.top})`);
         
         g.append('g').call(axisLeft(yScale));
         g.append('g').call(axisBottom(xScale))
@@ -31,16 +32,31 @@ export const renderGraph = () => {
         svg.selectAll('rect').data(data)
             .enter().append('rect')
                 .attr('y', d => yScale(yValue(d)))
+                // .attr('x', d => xScale.bandwidth())
                 .attr('width', d => xScale(xValue(d)))
-                .attr('height', yScale.bandwidth());
+                .attr('height', yScale.bandwidth())
+                .attr('transform', `translate(${margin.left},${margin.top - 12})`)
+                .on(mouse)
         
-        // svg.append('text')
-        //     .attr('class', 'yLabel')
-        //     .attr('x', -(height/2)-margin)
-        //     .attr('y', margin/2 - 20)
-        //     .attr('transform', 'rotate(-90)')
-        //     .attr('text-anchor', 'middle')
-        //     .text('Years')
+        g.append('text') 
+            .attr('class', 'yLabel')
+            .attr('x', margin.left - 120)
+            .attr('y', height/2)
+            // .attr('transform', 'rotate(-90)')
+            .attr('text-anchor', 'middle')
+            .text('Years')
+            .style('font-size', '12px')
+            .style('font-weight', 'bold')
+       
+        g.append('text') 
+            .attr('class', 'xLabel')
+            .attr('x', width/2)
+            .attr('y', height - margin.bottom + 12)
+            // .attr('transform', 'rotate(-90)')
+            .attr('text-anchor', 'middle')
+            .text('Average Price of Single Family Home')
+            .style('font-size', '12px')
+            .style('font-weight', 'bold')
     });
 }
 // let state = data[0];
