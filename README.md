@@ -1,28 +1,28 @@
-# State-Finder
+State Finder - What's the Damage?
+
+https://anderskindall.github.io/State-Finder/
+
 BACKGROUND
 
-As housing prices in the Bay Area and the rest of California continue to rise, a question that pops up is "If I were to leave the state, which state would I want to move to?" State Finder will show the median housing prices by state using a clickable choropleth map. Upon clicking, the user will have access to graphs/tables displaying the following quality of life metrics:
+As housing prices in the Bay Area and the rest of California continue to rise, a question that pops up is "If I were to leave the state, which state would I want to move to?" State Finder - What's the Damage? shows the mean prices for single-family homes by state by year using a bar graph.  The yearly data allows users to view trends throughout the years and anticipate market shifts.
 
-Healthcare Education Economy Infrastructure Opportunity Fiscal Stability Crime Natural Environment
+TECHNOLOGIES
 
-FEATURES
-
-With State Finder users will be able to:
-
--Click on each state highlighting and changing the color of the state
--Populate the page with dynamic graphs/tables for each state displaying the above listed metrics
--Filter the graphs/tables for the metrics that are important to the user
--Change the color scheme of the map and graphs
-In addition, this project will include: -An About modal explaining the metrics and their sources
+This project was implemented with the following technologies, libraries and APIs:
+  -JavaScript
+  -HTML
+  -CSS
+  -D3.js
+  -Zillow Research Housing Data API - https://www.zillow.com/research/data/
+  
+FUTURE FEATURES
+  -Clickable bar graphs, on clicking, the price value of each bar will be displayed in the window.
+  -Filter to display different states with dynamic bar graph changes
+  -More robust, granular data, showing month to month changes in prices for each state
+  -Choropleth map of the states, darker shaded states being more exepensive with a legend showing         approximate values for color referencewith a sliding filter to visualize the data by year
 
 WIREFRAME
 
 https://wireframe.cc/4WEheC
 
-TECHNOLOGIES
 
-This project will be implemented with the followiung technologies: -JavaScript -D3.js -HTML -CSS
-
-IMPLEMENTATION TIMELINE -Friday Afternoon/Weekend: Setup project, D3.js tutorials, look for sources of data. Get map rendered. -Monday: Implement the interactive features of the map. -Tuesday: Ensure the graphs/tables and clickable features work dynamically. Begin implementing filter features. -Wednesday: Finish filtering and styling. -Thursday: Fine tune, tie up loose ends.
-
-BONUS FEATURES -More granular data -Additional metrics -Potentially adding city by city metrics for most populous urban zones for each state
