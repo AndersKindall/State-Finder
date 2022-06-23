@@ -1,7 +1,12 @@
 import { select, scaleLinear, max, min, csv, scaleBand, axisLeft, axisBottom } from "d3"
 
-export const renderGraph = () => {
+export const renderGraph = (stateName) => {
+    //key into the object with stateName
+    //key into that number, key = year, val = cost
+    //make it a
     csv('./data/data.csv').then(data => {
+        //reformat data.json, make it an object with all states
+        //{ California: {2000: 1231, 2001: 2130, …}}, {Texas: {2000:
         const xValue = d => d.price;
         const yValue = d => d.year;
         const svg = select('svg');
