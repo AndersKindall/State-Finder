@@ -1,5 +1,5 @@
 import { compileData } from "./data";
-import { renderGraph } from "./graph";
+import { renderGraph } from "./dynamic-graph";
 
 
 window.addEventListener('DOMContentLoaded', (e) => {
