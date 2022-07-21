@@ -1,7 +1,7 @@
 // import { select, scaleLinear, max, min, csv, scaleBand, axisLeft, axisBottom, scaleOrdinal } from "d3"
 
 export const renderGraph = () => {
-    var fileName = "../data/mod_data.csv";
+    var fileName = "./data/mod_data.csv";
     var years = [
         "2000", "2001", "2002", 
         "2003", "2004", "2005", 
@@ -17,12 +17,14 @@ export const renderGraph = () => {
         var stateMap = {};
         data.forEach(function(d) {
             var state = d.state;
+            console.log(state)
             stateMap[state] = [];
 
             years.forEach(function(field) {
                 stateMap[state].push( +d[field] );
             });
         });
+        console.log(stateMap)
         makeVis(stateMap);
     });
 
@@ -42,7 +44,7 @@ export const renderGraph = () => {
             .range([height, 0])
 
         // Create canvas
-        var canvas = d3.select('graph-container')
+        var canvas = d3.select('.graph-container')
             .append('svg')
                 .attr('width', width + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
@@ -53,14 +55,14 @@ export const renderGraph = () => {
         var xAxis = d3.svg.axis()
             .scale(xScale)
             .orient('bottom')
-            .append('text')
-                .attr('class', 'xLabel')
-                .attr('x', width/2)
-                .attr('y', height - margin.bottom + 12)
-                .attr('text-anchor', 'middle')
-                .text('Years')
-                .style('font-size', '12px')
-                .style('font-weight', 'bold')
+            // .append('text')
+            //     .attr('class', 'xLabel')
+            //     .attr('x', width/2)
+            //     .attr('y', height - margin.bottom + 12)
+            //     .attr('text-anchor', 'middle')
+            //     .text('Years')
+            //     .style('font-size', '12px')
+            //     .style('font-weight', 'bold')
         
         // xAxis.append('text')
         //     .attr('class', 'xLabel')
@@ -100,12 +102,12 @@ export const renderGraph = () => {
             yScale.domain(d3.extent(data));
             yAxisHandleForUpdate.call(yAxis);
 
-            var bars = canvas.selectAll('.bar').data(data);
+            var bars = canvas.selectAll('bar').data(data);
 
             bars.enter()
                 .append('rect')
                     .attr('class', 'bar')
-                    .attr('x', function(d, i) { return xScale( years[i]); })
+                    .attr('x', function(d, i) { return xScale( years[i] ); })
                     .attr('width', xScale.rangeBand())
                     .attr('y', function(d,i) { return yScale(d); })
                     .attr('height', function (d, i) { return height - yScale(d); })
@@ -121,7 +123,37 @@ export const renderGraph = () => {
                             .duration(300)
                             .style('fill', 'black')  
                     })
+            bars.transition().duration(250)
+                    .attr('y', function(d,i) { return yScale(d); })
+                    .attr('height', function(d,i) { return height - yScale(d); })
+            
+            bars.remove();
         }
+
+        // Helper for dropdown change
+        var dropdownChange = function() {
+            var newState = d3.select(this).property('value'),
+                newData = stateMap[newState];
+
+            updateBars(newData);
+        }
+
+        var states = Object.keys(stateMap).sort();
+
+        console.log(states)
+
+        var dropdown = d3.select('.graph-container')
+            .insert('select', 'svg')
+            .on('change', dropdownChange);
+
+        dropdown.selectAll('option')
+                .data(states)
+            .enter().append('option')
+                .attr('value', function(d) { return d; });
+        
+        var initialData = stateMap[ states[0] ];
+        updateBars(initialData);
+
 
     }
     
