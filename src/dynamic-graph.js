@@ -17,20 +17,19 @@ export const renderGraph = () => {
         var stateMap = {};
         data.forEach(function(d) {
             var state = d.state;
-            console.log(state)
             stateMap[state] = [];
 
             years.forEach(function(field) {
                 stateMap[state].push( +d[field] );
             });
         });
-        console.log(stateMap)
         makeVis(stateMap);
     });
 
     var makeVis = function(stateMap) {
         // Define dimensions of vis
-        var margin = { top: 20, right: 20, bottom: 40, left: 70 };
+        var margin = { top: 30, right: 50, bottom: 50, left: 80
+         };
         var width = 1200 - margin.left - margin.right;
         var height = 900 - margin.top - margin.bottom;
 
@@ -89,11 +88,11 @@ export const renderGraph = () => {
 
         yAxisHandleForUpdate.append('text')
             .attr('class', 'yLabel')
-            .attr('x', margin.left - 120)
-            .attr('y', height/2)
+            .attr('x', margin.left - 400)
+            .attr('y', height/20)
             .attr('text-anchor', 'middle')
             .attr('transform', 'rotate(-90)')
-            .text('Price in Dollars')
+            .text('Price in U.S. Dollars')
             .style('font-size', '12px')
             .style('font-weight', 'bold')
 
@@ -102,7 +101,7 @@ export const renderGraph = () => {
             yScale.domain(d3.extent(data));
             yAxisHandleForUpdate.call(yAxis);
 
-            var bars = canvas.selectAll('bar').data(data);
+            var bars = canvas.selectAll('.bar').data(data);
 
             bars.enter()
                 .append('rect')
@@ -127,7 +126,7 @@ export const renderGraph = () => {
                     .attr('y', function(d,i) { return yScale(d); })
                     .attr('height', function(d,i) { return height - yScale(d); })
             
-            bars.remove();
+            bars.exit().remove();
         }
 
         // Helper for dropdown change
@@ -142,14 +141,17 @@ export const renderGraph = () => {
 
         console.log(states)
 
-        var dropdown = d3.select('.graph-container')
+        var dropdown = d3.select('.dropdown-container')
             .insert('select', 'svg')
             .on('change', dropdownChange);
 
         dropdown.selectAll('option')
                 .data(states)
             .enter().append('option')
-                .attr('value', function(d) { return d; });
+                .attr('value', function(d) { return d; })
+                .text(function (d) {
+                    return d[0].toUpperCase() + d.slice(1,d.length)
+                });
         
         var initialData = stateMap[ states[0] ];
         updateBars(initialData);
