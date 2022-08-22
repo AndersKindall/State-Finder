@@ -54,23 +54,6 @@ export const renderGraph = () => {
         var xAxis = d3.svg.axis()
             .scale(xScale)
             .orient('bottom')
-            // .append('text')
-            //     .attr('class', 'xLabel')
-            //     .attr('x', width/2)
-            //     .attr('y', height - margin.bottom + 12)
-            //     .attr('text-anchor', 'middle')
-            //     .text('Years')
-            //     .style('font-size', '12px')
-            //     .style('font-weight', 'bold')
-        
-        // xAxis.append('text')
-        //     .attr('class', 'xLabel')
-        //     .attr('x', width/2)
-        //     .attr('y', height - margin.bottom + 12)
-        //     .attr('text-anchor', 'middle')
-        //     .text('Years')
-        //     .style('font-size', '12px')
-        //     .style('font-weight', 'bold')
 
         canvas.append('g')
             .attr('class', 'x axis')
@@ -102,6 +85,16 @@ export const renderGraph = () => {
             yAxisHandleForUpdate.call(yAxis);
 
             var bars = canvas.selectAll('.bar').data(data);
+            
+            var toolTip = d3.select('.graph-container')
+                .append('div')
+                .style('opacity', 0)
+                .attr('class', 'tooltip')
+                .style('background-color', 'white')
+                .style('border', 'solid')
+                .style('border-width', '2px')
+                .style('border-radius', '5px')
+                .style('padding', '5px')
 
             bars.enter()
                 .append('rect')
@@ -110,18 +103,27 @@ export const renderGraph = () => {
                     .attr('width', xScale.rangeBand())
                     .attr('y', function(d,i) { return yScale(d); })
                     .attr('height', function (d, i) { return height - yScale(d); })
-                    .on('mouseenter', function (){
+                    .on('mouseover', function(d) {
+                        toolTip
+                            .style('opacity', 1)
                         d3.select(this)
-                            .transition()
-                            .duration(300)
-                            .style('fill', 'blue')
+                            .style('stroke', 'blue')
+                            .style('opacity', 1)
                     })
-                    .on('mouseleave', function () {
+                    .on('mousemove', function(d) {
+                        toolTip
+                            .html('Average Price:' + d.value)
+                            .style('left', (d3.mouse(this)[0] + 70) + 'px')
+                            .style('top', (d3.mouse(this)[1]) + 'px')
+                    })
+                    .on('mouseleave', function(d) {
+                        toolTip
+                            .style('opacity', 0)
                         d3.select(this)
-                            .transition()
-                            .duration(300)
-                            .style('fill', 'black')  
-                    })
+                            .style('stroke', 'none')
+                            .style('opacity', 0.8)
+                    }
+                    )
             bars.transition().duration(250)
                     .attr('y', function(d,i) { return yScale(d); })
                     .attr('height', function(d,i) { return height - yScale(d); })
