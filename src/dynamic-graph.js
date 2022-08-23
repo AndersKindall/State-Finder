@@ -141,8 +141,6 @@ export const renderGraph = () => {
 
         var states = Object.keys(stateMap).sort();
 
-        console.log(states)
-
         var dropdown = d3.select('.dropdown-container')
             .insert('select', 'svg')
             .on('change', dropdownChange);
