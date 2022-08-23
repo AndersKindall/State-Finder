@@ -103,7 +103,7 @@ export const renderGraph = () => {
                     .attr('width', xScale.rangeBand())
                     .attr('y', function(d,i) { return yScale(d); })
                     .attr('height', function (d, i) { return height - yScale(d); })
-                    .on('mouseover', function(d) {
+                    .on('mouseenter', function(d) {
                         toolTip
                             .style('opacity', 1)
                         d3.select(this)
