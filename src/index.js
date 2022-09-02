@@ -1,4 +1,3 @@
-import { compileData } from "./data";
 import { renderGraph } from "./dynamic-graph";
 
 

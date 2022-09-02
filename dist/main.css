@@ -4,13 +4,6 @@
 body {
   background-color: blanchedalmond;
   font-family: "Didot", serif;
-  /* display: flex; */
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,31 +22,16 @@ h2 {
   text-align: center;
 }
 
-.instructions-text {
-  font-size: 25px;
-  margin: 50px;
-  text-align: center;
-}
-
 .map-container {
   border-style: solid;
   border-color: black;
   border-width: 1px;
 }
 
-.content-container {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 .graph-container {
   border-style: solid;
   border-color: black;
   border-width: 1px;
-}
-
-.dropdown-container {
-  font-family: "Didot", serif;
 }
 
 .data-link {

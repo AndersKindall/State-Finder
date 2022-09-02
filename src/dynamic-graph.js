@@ -30,8 +30,8 @@ export const renderGraph = () => {
         // Define dimensions of vis
         var margin = { top: 30, right: 50, bottom: 50, left: 80
          };
-        var width = 1200 - margin.left - margin.right;
-        var height = 900 - margin.top - margin.bottom;
+        var width = 1000 - margin.left - margin.right;
+        var height = 700 - margin.top - margin.bottom;
 
         // Make x scale
         var xScale = d3.scale.ordinal()
