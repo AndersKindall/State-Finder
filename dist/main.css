@@ -14,6 +14,7 @@ h1 {
   font-size: 40px;
   font-weight: bold;
   margin-top: 20px;
+  text-align: center;
 }
 
 h2 {
@@ -22,12 +23,10 @@ h2 {
   text-align: center;
 }
 
-.map-container {
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
+.content-container {
+  display: flex;
+  flex-direction: row-reverse;
 }
-
 .graph-container {
   border-style: solid;
   border-color: black;
