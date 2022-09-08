@@ -1,3 +1,45 @@
-body{background-color:#ffebcd;font-family:"Didot",serif;display:flex;flex-direction:column;align-items:center;position:relative}h1{font-size:40px;font-weight:bold;margin-top:20px}h2{font-size:30px;margin:5px;text-align:center}.map-container{border-style:solid;border-color:#000;border-width:1px}.graph-container{border-style:solid;border-color:#000;border-width:1px}.data-link{font-size:20px;margin:20px}.legend{font-size:20px;margin:20px}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+body {
+  background-color: blanchedalmond;
+  font-family: "Didot", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
-/*# sourceMappingURL=main.css.map*/
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 5px;
+  text-align: center;
+}
+
+.map-container {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.graph-container {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.data-link {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.legend {
+  font-size: 20px;
+  margin: 20px;
+}
