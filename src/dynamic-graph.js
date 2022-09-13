@@ -103,6 +103,7 @@ export const renderGraph = () => {
                     .attr('width', xScale.rangeBand())
                     .attr('y', function(d,i) { return yScale(d); })
                     .attr('height', function (d, i) { return height - yScale(d); })
+                    .style('opacity', 0.8)
                     .on('mouseenter', function(d) {
                         toolTip
                             .style('opacity', 1)
@@ -112,7 +113,7 @@ export const renderGraph = () => {
                     })
                     .on('mousemove', function(d) {
                         toolTip
-                            .html('Average Price:' + d.value)
+                            .html('Average Price: $' + d)
                             .style('left', (d3.mouse(this)[0] + 70) + 'px')
                             .style('top', (d3.mouse(this)[1]) + 'px')
                     })
