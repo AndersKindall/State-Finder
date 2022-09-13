@@ -108,7 +108,7 @@ export const renderGraph = () => {
                         toolTip
                             .style('opacity', 1)
                         d3.select(this)
-                            .style('stroke', 'blue')
+                            .style('stroke', 'red')
                             .style('opacity', 1)
                     })
                     .on('mousemove', function(d) {
