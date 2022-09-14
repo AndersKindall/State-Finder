@@ -2,7 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 body {
-  background-color: blanchedalmond;
+  background-color: #F5EDDC;
   font-family: "Didot", serif;
   display: flex;
   flex-direction: column;
@@ -36,17 +36,16 @@ h2 {
 
 .instructions-text {
   font-size: 20px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .dropdown-container {
   padding: 15px;
-  font-family: "Didot";
 }
 
 .dropdown-menu {
   font-family: "Didot", serif;
-  font-size: 20px
+  font-size: 20px;
 }
 
 .content-container {
@@ -55,10 +54,23 @@ h2 {
 }
 
 .graph-container {
+  margin: 10px;
   padding: 10px;
   border-style: solid;
   border-color: black;
   border-width: 1px;
+}
+
+.legend {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.footer {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .data-link {
@@ -66,7 +78,21 @@ h2 {
   margin: 20px;
 }
 
-.legend {
+.social-links {
   font-size: 20px;
   margin: 20px;
+}
+
+a:link, a:visited {
+  background-color: #A2B5BB;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #EB1D36;
+  box-shadow: 0 0 10px rgba(150, 150, 150, .8);
 }

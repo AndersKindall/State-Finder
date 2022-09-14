@@ -50,6 +50,7 @@ export const renderGraph = () => {
                 .attr('width', width + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
             .append('g')
+                .attr('class', 'graph')
                 .attr('transform', `translate(${margin.left},${margin.top})`);
 
         // Make x-axis and add to canvas
@@ -109,8 +110,9 @@ export const renderGraph = () => {
                     .on('mouseenter', function(d) {
                         toolTip
                             .style('opacity', 1)
+                            .attr('class', 'tooltip-vis')
                         d3.select(this)
-                            .style('stroke', 'red')
+                            .style('fill', '#EB1D36')
                             .style('opacity', 1)
                     })
                     .on('mousemove', function(d) {
@@ -122,9 +124,11 @@ export const renderGraph = () => {
                     .on('mouseleave', function(d) {
                         toolTip
                             .style('opacity', 0)
+                            .attr('class', 'tooltip-hidden')
                         d3.select(this)
-                            .style('stroke', 'none')
+                            .style('fill', 'black')
                             .style('opacity', 0.8)
+                        d3.select('.tooltip-hidden').remove();
                     }
                     )
             bars.transition().duration(250)
@@ -132,6 +136,7 @@ export const renderGraph = () => {
                     .attr('height', function(d,i) { return height - yScale(d); })
             
             bars.exit().remove();
+            
         }
 
         // Helper for dropdown change
@@ -139,6 +144,7 @@ export const renderGraph = () => {
             var newState = d3.select(this).property('value'),
                 newData = stateMap[newState];
             
+            d3.select('.tooltip-hidden').remove();
             updateBars(newData);
         }
 
@@ -147,7 +153,6 @@ export const renderGraph = () => {
         var dropdown = d3.select('.dropdown-container')
             .insert('select', 'svg')
             .attr('class', 'dropdown-menu')
-            // .style('font-family', 'Didot')
             .on('change', dropdownChange);
 
         dropdown.selectAll('option')

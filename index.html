@@ -10,6 +10,7 @@
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="./data/single_family_home_by_state_array.json"></script>
     <script src="./dist/main.js"></script>
+    <script src="https://kit.fontawesome.com/cded451fb1.js" crossorigin="anonymous"></script>
     <title>State Finder</title>
   </head>
 
@@ -19,7 +20,7 @@
       <h2>Examining the Average Price of a Single-Family Home By U.S. State</h2>
       <div class="sub-header">
         <div class="instructions-text">
-          <text>Select a state from the dropdown menu below the graph to view the average price of a single-family home over the years in your selected state.</text>
+          <text>Select a state from the dropdown menu to view the average price of a single-family home over the years in your selected state.</text>
           <br>
           <br>
           <text> Hover over each year's bar to view the average price in U.S. Dollars.</text>
@@ -31,9 +32,6 @@
     <div class="content-container">
       <div class="graph-container"></div>
       <div class="legend">
-        <div class="data-link">
-          All data sourced from <a href="https://www.zillow.com/research/data/">Zillow.com</a>
-        </div>
         <text rows="6" cols="50">
           Zillow defines a "single-family home" as "a standalone, detached house used as a single dwelling unit, meaning a residence for one family, person or household. It has its own private entrance and direct street access, and is built on its own land, usually with additional yard space." 
         </text>
@@ -42,6 +40,16 @@
         <text rows="6" cols="50">
           Zillow data was incomplete for several states, and as such there will be zero values for the incomplete years.
         </text>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="data-link">
+        All data sourced from <a class="zillow-link" href="https://www.zillow.com/research/data/" target="_blank">Zillow.com</a>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/AndersKindall" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/anders-kindall-175422216/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://angel.co/u/anders-kindall" target="_blank"><i class="fa-brands fa-angellist"></i></a>
       </div>
     </div>
       
