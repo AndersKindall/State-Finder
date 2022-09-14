@@ -31,7 +31,7 @@ export const renderGraph = () => {
         var margin = { top: 30, right: 50, bottom: 50, left: 80
          };
         var width = 1000 - margin.left - margin.right;
-        var height = 700 - margin.top - margin.bottom;
+        var height = 600 - margin.top - margin.bottom;
 
         // Make x scale
         var xScale = d3.scale.ordinal()
@@ -39,7 +39,9 @@ export const renderGraph = () => {
             .rangeRoundBands([0, width], 0.1);
 
         // Make y scale, domain will be defined on bar update
+        // NEEED TO CHANGE TO GET MINIMUM VALUE
         var yScale = d3.scale.linear()
+            // .domain([d3.min(data), d3.max(data)])
             .range([height, 0])
 
         // Create canvas
@@ -56,7 +58,7 @@ export const renderGraph = () => {
             .orient('bottom')
 
         canvas.append('g')
-            .attr('class', 'x axis')
+            .attr('class', 'x-axis')
             .attr('transform', `translate(0, ${height})`)
             .call(xAxis);
 
@@ -66,15 +68,15 @@ export const renderGraph = () => {
             .orient('left');
         
         var yAxisHandleForUpdate = canvas.append('g')
-            .attr('class', 'y axis')
+            .attr('class', 'y-axis')
             .call(yAxis);
 
         yAxisHandleForUpdate.append('text')
             .attr('class', 'yLabel')
-            .attr('x', margin.left - 400)
+            .attr('x', margin.left)
             .attr('y', height/20)
             .attr('text-anchor', 'middle')
-            .attr('transform', 'rotate(-90)')
+            // .attr('transform', 'rotate(-90)')
             .text('Price in U.S. Dollars')
             .style('font-size', '12px')
             .style('font-weight', 'bold')
@@ -95,14 +97,14 @@ export const renderGraph = () => {
                 .style('border-width', '2px')
                 .style('border-radius', '5px')
                 .style('padding', '5px')
-
+            
             bars.enter()
                 .append('rect')
                     .attr('class', 'bar')
                     .attr('x', function(d, i) { return xScale( years[i] ); })
                     .attr('width', xScale.rangeBand())
                     .attr('y', function(d,i) { return yScale(d); })
-                    .attr('height', function (d, i) { return height - yScale(d); })
+                    .attr('height', function (d, i) { return height - yScale(d);})
                     .style('opacity', 0.8)
                     .on('mouseenter', function(d) {
                         toolTip
@@ -113,7 +115,7 @@ export const renderGraph = () => {
                     })
                     .on('mousemove', function(d) {
                         toolTip
-                            .html('Average Price: $' + d)
+                            .html('Average Price of a Single-Family Home: $' + d)
                             .style('left', (d3.mouse(this)[0] + 70) + 'px')
                             .style('top', (d3.mouse(this)[1]) + 'px')
                     })
@@ -136,7 +138,7 @@ export const renderGraph = () => {
         var dropdownChange = function() {
             var newState = d3.select(this).property('value'),
                 newData = stateMap[newState];
-
+            
             updateBars(newData);
         }
 
@@ -144,6 +146,8 @@ export const renderGraph = () => {
 
         var dropdown = d3.select('.dropdown-container')
             .insert('select', 'svg')
+            .attr('class', 'dropdown-menu')
+            // .style('font-family', 'Didot')
             .on('change', dropdownChange);
 
         dropdown.selectAll('option')
