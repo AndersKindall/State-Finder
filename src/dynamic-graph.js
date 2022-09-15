@@ -105,7 +105,7 @@ export const renderGraph = () => {
                     .attr('x', function(d, i) { return xScale( years[i] ); })
                     .attr('width', xScale.rangeBand())
                     .attr('y', function(d,i) { return yScale(d); })
-                    .attr('height', function (d, i) { return height - yScale(d);})
+                    .attr('height', function (d, i) { return (height - 50) - yScale(d);})
                     .style('opacity', 0.8)
                     .on('mouseenter', function(d) {
                         toolTip

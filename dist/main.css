@@ -71,6 +71,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 
 .data-link {
@@ -79,7 +80,7 @@ h2 {
 }
 
 .social-links {
-  font-size: 20px;
+  font-size: 30px;
   margin: 20px;
 }
 
