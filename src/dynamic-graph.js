@@ -40,9 +40,8 @@ export const renderGraph = () => {
 
         // Make y scale, domain will be defined on bar update
         // NEEED TO CHANGE TO GET MINIMUM VALUE
-        var yScale = d3.scale.linear()
-            // .domain([d3.min(data), d3.max(data)])
-            .range([(height-20), 0])
+        var yScale = d3.scale.linear()            
+            .range([(height+6), 0])
 
         // Create canvas
         var canvas = d3.select('.graph-container')

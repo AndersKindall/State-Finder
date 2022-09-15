@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************************************/
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
+  \********************************************************************************************************************************************/
 body {
   background-color: #F5EDDC;
   font-family: "Didot", serif;
@@ -14,12 +14,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px;
 }
 
 h1 {
   font-size: 40px;
   font-weight: bold;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -28,15 +30,11 @@ h2 {
   text-align: center;
 }
 
-.sub-header {
+.data-dropdown {
   display: flex;
   flex-direction: row;
   padding: 20px;
-}
-
-.instructions-text {
-  font-size: 20px;
-  padding: 15px;
+  align-items: center;
 }
 
 .dropdown-container {
