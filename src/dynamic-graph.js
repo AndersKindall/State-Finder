@@ -42,7 +42,7 @@ export const renderGraph = () => {
         // NEEED TO CHANGE TO GET MINIMUM VALUE
         var yScale = d3.scale.linear()
             // .domain([d3.min(data), d3.max(data)])
-            .range([height, 0])
+            .range([(height-20), 0])
 
         // Create canvas
         var canvas = d3.select('.graph-container')
@@ -89,7 +89,7 @@ export const renderGraph = () => {
 
             var bars = canvas.selectAll('.bar').data(data);
             
-            var toolTip = d3.select('.graph-container')
+            var toolTip = d3.selectAll('.graph-container')
                 .append('div')
                 .style('opacity', 0)
                 .attr('class', 'tooltip')
@@ -105,12 +105,11 @@ export const renderGraph = () => {
                     .attr('x', function(d, i) { return xScale( years[i] ); })
                     .attr('width', xScale.rangeBand())
                     .attr('y', function(d,i) { return yScale(d); })
-                    .attr('height', function (d, i) { return (height - 50) - yScale(d);})
+                    .attr('height', function (d, i) { return height - yScale(d);})
                     .style('opacity', 0.8)
                     .on('mouseenter', function(d) {
                         toolTip
                             .style('opacity', 1)
-                            .attr('class', 'tooltip-vis')
                         d3.select(this)
                             .style('fill', '#EB1D36')
                             .style('opacity', 1)
@@ -118,17 +117,15 @@ export const renderGraph = () => {
                     .on('mousemove', function(d) {
                         toolTip
                             .html('Average Price of a Single-Family Home: $' + d)
-                            .style('left', (d3.mouse(this)[0] + 70) + 'px')
-                            .style('top', (d3.mouse(this)[1]) + 'px')
+                            .style('left', `${(d3.mouse(this)[0] + 70)}px`)
+                            .style('top', `${(d3.mouse(this)[1])}px`)
                     })
                     .on('mouseleave', function(d) {
                         toolTip
                             .style('opacity', 0)
-                            .attr('class', 'tooltip-hidden')
                         d3.select(this)
                             .style('fill', 'black')
                             .style('opacity', 0.8)
-                        d3.select('.tooltip-hidden').remove();
                     }
                     )
             bars.transition().duration(250)
@@ -138,13 +135,14 @@ export const renderGraph = () => {
             bars.exit().remove();
             
         }
-
+        
         // Helper for dropdown change
         var dropdownChange = function() {
             var newState = d3.select(this).property('value'),
-                newData = stateMap[newState];
+            newData = stateMap[newState];
             
-            d3.select('.tooltip-hidden').remove();
+            toolTip.exit().remove();
+            // d3.select('.tooltip-hidden').remove();
             updateBars(newData);
         }
 
