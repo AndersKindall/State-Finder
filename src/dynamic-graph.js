@@ -41,7 +41,7 @@ export const renderGraph = () => {
         // Make y scale, domain will be defined on bar update
         // NEEED TO CHANGE TO GET MINIMUM VALUE
         var yScale = d3.scale.linear()            
-            .range([(height+6), 0])
+            .range([(height), 0])
 
         // Create canvas
         var canvas = d3.select('.graph-container')
@@ -87,6 +87,7 @@ export const renderGraph = () => {
             yAxisHandleForUpdate.call(yAxis);
 
             var bars = canvas.selectAll('.bar').data(data);
+            //need to change where tooltip is appended, show how it pops up
             
             var toolTip = d3.selectAll('.graph-container')
                 .append('div')
@@ -131,18 +132,16 @@ export const renderGraph = () => {
                     .attr('y', function(d,i) { return yScale(d); })
                     .attr('height', function(d,i) { return height - yScale(d); })
             
-            bars.exit().remove();
-            
-        }
-        
-        // Helper for dropdown change
-        var dropdownChange = function() {
-            var newState = d3.select(this).property('value'),
-            newData = stateMap[newState];
-            
             toolTip.exit().remove();
-            // d3.select('.tooltip-hidden').remove();
-            updateBars(newData);
+            bars.exit().remove();
+        }
+                
+                // Helper for dropdown change
+        var dropdownChange = function() {
+                var newState = d3.select(this).property('value'),
+                newData = stateMap[newState];
+                    
+                updateBars(newData);
         }
 
         var states = Object.keys(stateMap).sort();
