@@ -39,7 +39,6 @@ export const renderGraph = () => {
             .rangeRoundBands([0, width], 0.1);
 
         // Make y scale, domain will be defined on bar update
-        // NEEED TO CHANGE TO GET MINIMUM VALUE
         var yScale = d3.scale.linear()            
             .range([(height), 0])
 
@@ -76,7 +75,6 @@ export const renderGraph = () => {
             .attr('x', margin.left)
             .attr('y', height/20)
             .attr('text-anchor', 'middle')
-            // .attr('transform', 'rotate(-90)')
             .text('Price in U.S. Dollars')
             .style('font-size', '12px')
             .style('font-weight', 'bold')
@@ -87,7 +85,6 @@ export const renderGraph = () => {
             yAxisHandleForUpdate.call(yAxis);
 
             var bars = canvas.selectAll('.bar').data(data);
-            //need to change where tooltip is appended, show how it pops up
             
             var toolTip = d3.selectAll('.graph-container')
                 .append('div')
