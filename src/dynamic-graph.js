@@ -93,11 +93,6 @@ export const renderGraph = () => {
                 .append('div')
                 .style('opacity', 0)
                 .attr('class', 'tooltip')
-                .style('background-color', 'white')
-                .style('border', 'solid')
-                .style('border-width', '2px')
-                .style('border-radius', '5px')
-                .style('padding', '5px')
             
             bars.enter()
                 .append('rect')
@@ -107,7 +102,7 @@ export const renderGraph = () => {
                     .attr('y', function(d,i) { return yScale(d); })
                     .attr('height', function (d, i) { return height - yScale(d);})
                     .style('opacity', 0.8)
-                    .on('mouseenter', function(d) {
+                    .on('mouseenter', function(d, i) {
                         toolTip
                             .style('opacity', 1)
                         d3.select(this)
@@ -117,22 +112,22 @@ export const renderGraph = () => {
                     .on('mousemove', function(d) {
                         toolTip
                             .html('Average Price of a Single-Family Home: $' + d)
-                            .style('left', `${(d3.mouse(this)[0] + 70)}px`)
-                            .style('top', `${(d3.mouse(this)[1])}px`)
-                    })
+                            .style('left', ((d3.mouse(this)[0]) + 500) + 'px')
+                            .style('top', ((d3.mouse(this)[1]) + 100) + 'px')
+                    }) 
                     .on('mouseleave', function(d) {
                         toolTip
                             .style('opacity', 0)
                         d3.select(this)
                             .style('fill', 'black')
                             .style('opacity', 0.8)
+                        d3.select('#tooltip').classed('hidden', true);
                     }
                     )
             bars.transition().duration(250)
                     .attr('y', function(d,i) { return yScale(d); })
                     .attr('height', function(d,i) { return height - yScale(d); })
             
-            toolTip.exit().remove();
             bars.exit().remove();
         }
                 
